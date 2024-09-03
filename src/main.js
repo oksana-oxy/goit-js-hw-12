@@ -89,7 +89,11 @@ const onLoadBtnClick = async event => {
       iziToast.info({
       message: 'We`re sorry, but you`ve reached the end of search results.',
       position: 'bottomRight',
-    });
+      });
+      createImages(response);
+    
+      smoothScroll();
+
       return;
     }
 
@@ -100,6 +104,10 @@ const onLoadBtnClick = async event => {
 
   } catch (err) {
     console.log(err);
+    iziToast.error({
+      message: 'An error occurred. Please try again later.',
+      position: 'bottomRight',
+    });
 }
 };
 
