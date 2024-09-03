@@ -86,8 +86,9 @@ const onLoadBtnClick = async event => {
   try {
     currentPage++;
     loader.classList.remove('hidden');
-    
+    loadMoreEl.classList.add('hidden');
     const response = await searchImagesByQuery(wordForSearch, currentPage, perPage);
+    
     const data = response.data; 
 
     if (Math.ceil(data.totalHits / perPage) === currentPage) {
