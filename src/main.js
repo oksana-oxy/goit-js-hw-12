@@ -62,7 +62,7 @@ const handleSubmit = async event => {
       } catch (err) {
     console.log(err);
     iziToast.error({
-      message: 'An error occurred. Please try again later.',
+      message: `An error occurred: ${err}. Please try again later.`,
       position: 'bottomRight',
     });
   } finally {
@@ -105,7 +105,7 @@ const onLoadBtnClick = async event => {
   } catch (err) {
     console.log(err);
     iziToast.error({
-      message: 'An error occurred. Please try again later.',
+      message: `An error occurred: ${err}. Please try again later.`,
       position: 'bottomRight',
     });
 }
