@@ -85,6 +85,7 @@ img {
     justify-content: center;
     column-gap: 24px;
     row-gap: 24px;
+
 }
 
 .gallery-card {
@@ -146,9 +147,9 @@ img {
     border-color: #FF3D00 #FF3D00 transparent #FF3D00;
     border-radius: 50%;
     display: block;
-    /* position: absolute;
-    top:20%;
-    left: 45%; */
+    position: fixed;
+        top: 90%;
+        left: 48%;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
     text-align: center;

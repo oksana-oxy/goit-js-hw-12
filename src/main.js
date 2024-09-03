@@ -86,6 +86,7 @@ const onLoadBtnClick = async event => {
   try {
     currentPage++;
     loader.classList.remove('hidden');
+    
     const response = await searchImagesByQuery(wordForSearch, currentPage, perPage);
     const data = response.data; 
 
@@ -110,6 +111,7 @@ const onLoadBtnClick = async event => {
 };
 
 loadMoreEl.addEventListener('click', onLoadBtnClick);
+
 function smoothScroll() {
     const { height: cardHeight } = document.querySelector('.gallery').firstElementChild.getBoundingClientRect();
     window.scrollBy({
