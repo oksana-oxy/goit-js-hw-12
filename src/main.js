@@ -14,15 +14,6 @@ let currentPage = 1;
 let wordForSearch = '';
 const perPage = 15;
 
-// function smoothScroll() 
-//   const { height: cardHeight } = document
-//     .querySelector('.gallery-img')
-//     .firstElementChild.getBoundingClientRect();
-//   window.scrollBy({
-//     top: cardHeight * 2,
-//     behavior: 'smooth',
-//   });
-// smoothScroll();
 const handleSubmit = async event => {
   try {
     event.preventDefault();
@@ -30,6 +21,7 @@ const handleSubmit = async event => {
     loader.classList.remove('hidden');
     loadMoreEl.classList.add('hidden');
     wordForSearch = input.value.trim();
+    currentPage = 1
     if (wordForSearch === '') {
       iziToast.error({
         position: 'topRight',
